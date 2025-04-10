@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://b6fka3oudqe4"]
+
+[ext_resource type="Shader" uid="uid://c0ew6um0vfva8" path="res://shader_p3/shield/shader_shield.gdshader" id="1_82kv0"]
+[ext_resource type="Texture2D" uid="uid://mspfurfqayxl" path="res://shader_p3/shield/shield_pattern.jpg" id="2_fs15w"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fs15w"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fruqd"]
+noise = SubResource("FastNoiseLite_fs15w")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_82kv0")
+shader_parameter/color = Color(4.01176, 0, 2.71765, 1)
+shader_parameter/colorIntersection = Color(4.01176, 0, 2.71765, 1)
+shader_parameter/colorFresnel = Color(4.01176, 0, 2.71765, 1)
+shader_parameter/fill = 0.01
+shader_parameter/intersectionOffset = 0.15
+shader_parameter/fresnelPower = 5.0
+shader_parameter/scrollPattern = ExtResource("2_fs15w")
+shader_parameter/scrollSpeed = 0.05
+shader_parameter/patternTransparency = 0.0
+shader_parameter/tiling = Vector2(4, 2)
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/erosionThreshold = 0.0
+shader_parameter/erosionNoise = SubResource("NoiseTexture2D_fruqd")
+shader_parameter/gloss = 1.0
