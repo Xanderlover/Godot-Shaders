@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bjr7f7scjg60p"]
+
+[ext_resource type="Shader" uid="uid://citojklj7iiuy" path="res://shader_p3/voronoi/shader_voronoi.gdshader" id="1_7vo84"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_7vo84")
